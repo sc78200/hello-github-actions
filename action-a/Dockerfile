@@ -6,3 +6,7 @@ LABEL  " com.github.actions.color " = " violet "
 LABEL  "repository" = "http://github.com/octocat/hello-world" 
 LABEL  "homepage" = "http://github.com/actions" 
 LABEL  "mainter " = "Octocat <octocat@github.com> "
+
+ADD entrypoint.sh /entrypoint.sh
+ RUN chmod + x /entrypoint.sh
+ ENTRYPOINT [ "/entrypoint.sh" ]
